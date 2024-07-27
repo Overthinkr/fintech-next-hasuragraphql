@@ -29,15 +29,15 @@ https://subspace-intern.hasura.app/v1/graphql
 
 #### Get Users
 
-````query GetUsers {
+`query GetUsers {
     Users {
       username
       password
     }
-  }```
+  }`
 
 ##### Sample Response:
-```{
+`{
   "data": {
     "Users": [
       {
@@ -50,20 +50,20 @@ https://subspace-intern.hasura.app/v1/graphql
       }
     ]
   }
-}```
+}`
 
 #### Get Balance
-```query getBalance($username: String!) {
+`query getBalance($username: String!) {
     Users(where: {username: {_eq: $username}}) {
       username
       Accounts {
         balance
       }
     }
-  }```
+  }`
 
 ##### Sample Response
-```{
+`{
   "data": {
     "Users": [
       {
@@ -76,37 +76,37 @@ https://subspace-intern.hasura.app/v1/graphql
       }
     ]
   }
-}```
+}`
 
 ### Mutations Used
 #### Add Users
-```query getBalance($username: String!) {
+`query getBalance($username: String!) {
     Users(where: {username: {_eq: $username}}) {
       username
       Accounts {
         balance
       }
     }
-  }```
+  }`
 
 #### Create Account
-```query getBalance($username: String!) {
+`query getBalance($username: String!) {
     Users(where: {username: {_eq: $username}}) {
       username
       Accounts {
         balance
       }
     }
-  }```
+  }`
 
 #### Update Account
-```mutation UpdateBalance($username: String!, $balance: Int!) {
+`mutation UpdateBalance($username: String!, $balance: Int!) {
     update_Accounts(where: {User: {username: {_eq: $username}}}, _set: {balance: $balance}) {
       affected_rows
     }
-  }```
+  }`
 
-** MISC **
+## ** MISC **
 ## Challenges, Tradeoffs and Limitations
 
 - Figuring out the right way to use permissions and roles
@@ -117,4 +117,3 @@ https://subspace-intern.hasura.app/v1/graphql
 - (minor) resolving react compenent hook issues
 - Finding an alternative non- OAuth or firebase to complete in time (used local storage instead)
 - Time limitations - Under 48 hours (due to college semester examinations (obviously no excuse however))
-````
