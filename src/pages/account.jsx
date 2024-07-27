@@ -80,6 +80,7 @@ export default function Account() {
 
   const handlelogout = () => {
     location.state = null
+    setSuccessMessage('Logging out...');
   }
 
   return (
