@@ -117,3 +117,12 @@ https://subspace-intern.hasura.app/v1/graphql
 - (minor) resolving react compenent hook issues
 - Finding an alternative non- OAuth or firebase to complete in time (used local storage instead)
 - Time limitations - Under 48 hours (due to college semester examinations (obviously no excuse however))
+
+## Tech Stacks Used
+
+- Apollo Client
+- ExpressJS (nodejs)
+- Graphql 
+- reactjs
+- vite
+- tailwind
